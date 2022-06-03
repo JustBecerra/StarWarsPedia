@@ -1,5 +1,5 @@
 import { Container, Box } from "@mui/material"
-import MainCardInfo from "../../molecules/MainCardInfo/MainCardInfo"
+import MainCardInfo from "../molecules/MainCardInfo"
 
 export default function MainCard(){
     return(
