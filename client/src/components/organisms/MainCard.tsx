@@ -1,5 +1,5 @@
 import { Container, Box } from "@mui/material"
-import MainCardInfo from "../molecules/MainCardInfo"
+import OpeningInfo from "../molecules/OpeningInfo"
 
 export default function MainCard(){
     return(
@@ -15,7 +15,7 @@ export default function MainCard(){
                     // paddingTop: '100px',
                   }}
             >
-                <MainCardInfo />
+                <OpeningInfo />
             </Box>
         </Container>
     )

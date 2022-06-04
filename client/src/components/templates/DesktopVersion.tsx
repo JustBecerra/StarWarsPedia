@@ -3,7 +3,7 @@ import NavBar from "../molecules/NavBar";
 import MainCard from "../organisms/MainCard";
 
 export default function DesktopVersion(){
-    //navbar should be in an organism
+    //navbar should be integrated into an organism
     return(
         <>
             <NavBar />
