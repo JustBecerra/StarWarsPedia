@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import jedilogo from "../../imgs/jedilogo.png"
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 export default function RepublicLogo(){
     const IntroLogo = styled('img')(({ theme }) => ({
