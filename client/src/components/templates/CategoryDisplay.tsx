@@ -1,9 +1,9 @@
-import Card from "../molecules/Card"
+import CardDisplayer from "../organisms/CardDisplayer"
 
 export default function CategoryDisplay(){
     return(
         <>
-            <Card />
+            <CardDisplayer />
         </>
     )
 }

@@ -5,6 +5,7 @@ import LanguageSharpIcon from '@mui/icons-material/LanguageSharp';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import Yoda from '../../imgs/yoda.png';
 import { styled, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function Categories(){
     const Yodalogo = styled('img')(({ theme }) => ({
@@ -15,60 +16,62 @@ export default function Categories(){
     }));
 
     return(
-        <>
+        <>  
+          <Link to='/categories'>
             <IconButton>
-                <Typography
-                    variant="h6"
-                    color="whitesmoke"
-                >
-                    Films
-                </Typography>
-                <MovieSharpIcon 
-                    sx={{ color:"whitesmoke" }}
-                />
+              <Typography
+                variant="h6"
+                color="whitesmoke"
+              >
+                Films
+              </Typography>
+              <MovieSharpIcon 
+                sx={{ color:"whitesmoke" }}
+              />
             </IconButton>
             <IconButton>
-                <Typography
-                    variant="h6"
-                    color="whitesmoke"
-                >
-                    Characters
-                </Typography>
-                <PeopleAltSharpIcon 
-                    sx={{ color:"whitesmoke" }}
-                />
+              <Typography
+                variant="h6"
+                color="whitesmoke"
+              >
+                Characters
+              </Typography>
+              <PeopleAltSharpIcon 
+                sx={{ color:"whitesmoke" }}
+              />
             </IconButton>
             <IconButton>
-                <Typography
-                    variant="h6"
-                    color="whitesmoke"
-                >
-                    Planets
-                </Typography>
-                <LanguageSharpIcon 
-                    sx={{ color:"whitesmoke" }}
-                />
+              <Typography
+                variant="h6"
+                color="whitesmoke"
+              >
+                Planets
+              </Typography>
+              <LanguageSharpIcon 
+                sx={{ color:"whitesmoke" }}
+              />
             </IconButton>
             <IconButton>
-                <Typography
-                    variant="h6"
-                    color="whitesmoke"
-                >
-                    Species
-                </Typography>
-                <Yodalogo src={Yoda} />
+              <Typography
+                variant="h6"
+                color="whitesmoke"
+              >
+                Species
+              </Typography>
+              <Yodalogo src={Yoda} />
             </IconButton>
             <IconButton>
-                <Typography
-                    variant="h6"
-                    color="whitesmoke"
-                >
-                    Vehicules
-                </Typography>
-                <RocketLaunchIcon 
-                    sx={{ color:"whitesmoke" }}
-                />
+              <Typography
+                variant="h6"
+                color="whitesmoke"
+              >
+                Vehicules
+              </Typography>
+              <RocketLaunchIcon 
+                sx={{ color:"whitesmoke" }}
+              />
             </IconButton>
+          </Link>  
         </>
     )
 }

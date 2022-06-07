@@ -11,7 +11,7 @@ export default function MainCard(){
                     backgroundColor: '#13191a',
                     marginRight: 'auto',
                     marginLeft: 'auto',
-                    marginTop: 5,
+                    marginTop: 11,
                     // paddingTop: '100px',
                   }}
             >

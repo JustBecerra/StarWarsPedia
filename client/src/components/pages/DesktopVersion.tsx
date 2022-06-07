@@ -1,6 +1,6 @@
 import NavBar from "../molecules/NavBar";
-import MainCard from "../organisms/MainCard";
-import CategoryDisplay from "../organisms/CategoryDisplay";
+import MainCard from "../templates/MainCard";
+import CategoryDisplay from "../templates/CategoryDisplay";
 import { Routes, Route } from "react-router-dom";
 
 export default function DesktopVersion(){
@@ -10,7 +10,7 @@ export default function DesktopVersion(){
             <NavBar />
             <Routes>
                 <Route path="/" element={<MainCard />} />
-                <Route path="/category" element={<CategoryDisplay />} />
+                <Route path="/categories" element={<CategoryDisplay />} />
             </Routes>
         </>
     )

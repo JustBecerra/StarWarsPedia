@@ -1,5 +1,5 @@
 import './App.css';
-import DesktopVersion from './components/templates/DesktopVersion';
+import DesktopVersion from './components/pages/DesktopVersion';
 
 function App() {
   return (

@@ -6,6 +6,7 @@ import SearchBar from '../atoms/SearchBar';
 import Categories from '../atoms/Categories';
 import Deathstar from '../../imgs/deathstar.png';
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 export default function NavBar(){  
   const Deathstarlogo = styled('img')(({ theme }) => ({
@@ -19,15 +20,17 @@ export default function NavBar(){
     <Box>
       <AppBar position='fixed' sx={{ bgcolor:'transparent'}}>
         <Toolbar>
-          <IconButton
+         <Link to='/'>
+           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
-          >
+           >
             <Deathstarlogo src={Deathstar} />
-          </IconButton>
+           </IconButton>
+          </Link>
           <SearchBar />
           <Categories />
         </Toolbar>
