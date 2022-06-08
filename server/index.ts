@@ -1,14 +1,15 @@
-import express, { Express, Request, Response } from 'express';
+import  app  from './src/app';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-const app: Express = express();
-const port = process.env.PORT;
-
-app.get('/', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server');
-});
+const port = process.env.PORT
+// Syncing all the models at once.
+// conn.sync({ force: false }).then(() => {
+//   app.listen(process.env.PORT, () => {
+//     console.log('%s listening at 3001'); // eslint-disable-line no-console
+//   });
+// });
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
