@@ -3,10 +3,13 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import routes from './routes/routeindex'
+import { ApolloServer, gql } from 'apollo-server';
 
 dotenv.config();
 
 const app: Express = express();
+
+
 
 const router = express.Router();
 app.use('/', routes);
