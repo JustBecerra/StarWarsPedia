@@ -1,7 +1,8 @@
 import { Box } from "@mui/system"
 import SimpleCardInfo from "../atoms/SimpleCardInfo"
 
-export default function Card(){
+export default function Card({title, releaseDate}: any) {
+    // console.log(releaseDate)
     return(
         <Box sx={{
             width: 930,
@@ -10,7 +11,7 @@ export default function Card(){
             marginRight: 'auto',
             marginLeft: 'auto',
         }}>
-            <SimpleCardInfo />
+            <SimpleCardInfo title={title} releaseDate={releaseDate}/>
         </Box>
     )
 }

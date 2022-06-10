@@ -9,7 +9,41 @@ dotenv.config();
 
 const app: Express = express();
 
+const typeDefs = gql`
+  type Film {
+    title: String
+    episodeID: Int
+    releaseDate: String
+    director: String
+    openingCrawl: String
+  }
 
+  type Query {
+    films: [Film]
+  }
+`
+
+const films = [
+  {
+    title: 'The Awakening',
+    episodeID: 1,
+    releaseDate: '1999-12-18',
+    director: 'J.J. Abrams',
+    openingCrawl: 'lmao'
+  },
+];
+
+const resolvers = {
+  Query: {
+    films: () => films,
+  },
+};
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  csrfPrevention: true,
+});
 
 const router = express.Router();
 app.use('/', routes);
@@ -31,4 +65,4 @@ app.use((req, res, next) => {
   next();
 });
 
-export default app
+export default server
