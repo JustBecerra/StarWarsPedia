@@ -9,15 +9,15 @@ import { Link } from 'react-router-dom';
 
 export default function Categories(){
     const Yodalogo = styled('img')(({ theme }) => ({
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        width: 50,
-        height: 50,
+      position: 'relative',
+      borderRadius: theme.shape.borderRadius,
+      width: 50,
+      height: 50,
     }));
 
     return(
         <>  
-          <Link to='/categories'>
+          <Link to='/categories' style={{ textDecoration: 'none' }}>
             <IconButton>
               <Typography
                 variant="h6"
@@ -29,6 +29,8 @@ export default function Categories(){
                 sx={{ color:"whitesmoke" }}
               />
             </IconButton>
+          </Link>
+          <Link to='/categories' style={{ textDecoration: 'none' }}>
             <IconButton>
               <Typography
                 variant="h6"
@@ -40,6 +42,8 @@ export default function Categories(){
                 sx={{ color:"whitesmoke" }}
               />
             </IconButton>
+          </Link>
+          <Link to='/categories' style={{ textDecoration: 'none' }}>
             <IconButton>
               <Typography
                 variant="h6"
@@ -51,6 +55,8 @@ export default function Categories(){
                 sx={{ color:"whitesmoke" }}
               />
             </IconButton>
+          </Link>
+          <Link to='/categories' style={{ textDecoration: 'none' }}>
             <IconButton>
               <Typography
                 variant="h6"
@@ -60,6 +66,8 @@ export default function Categories(){
               </Typography>
               <Yodalogo src={Yoda} />
             </IconButton>
+          </Link>
+          <Link to='/categories' style={{ textDecoration: 'none' }}>
             <IconButton>
               <Typography
                 variant="h6"
@@ -71,7 +79,7 @@ export default function Categories(){
                 sx={{ color:"whitesmoke" }}
               />
             </IconButton>
-          </Link>  
+          </Link>
         </>
     )
 }

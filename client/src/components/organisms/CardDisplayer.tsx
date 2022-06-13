@@ -26,7 +26,7 @@ export default function CardDisplayer(){
             <Box
                 sx={{
                     width: 1000,
-                    height: 600,
+                    height: 'fit-content',
                     backgroundColor: '#13191a',
                     marginRight: 'auto',
                     marginLeft: 'auto',
@@ -36,7 +36,7 @@ export default function CardDisplayer(){
             >
                 {data.allFilms.films.map((film: any) => {
                     console.log(film)
-                    return <Card key={film.episodeID} title={film.title} releaseDate={film.releaseDate}/>
+                    return <Card key={film.episodeID} film={film}/>
                 })}
             </Box>
         </Container>

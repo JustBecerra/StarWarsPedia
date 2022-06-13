@@ -13,7 +13,7 @@ export default function SimpleCardInfo({title, releaseDate} : any) {
             <Typography
                 variant="h5"
             >
-                {releaseDate}
+                Release date: {releaseDate}
             </Typography>
         </>
     )
