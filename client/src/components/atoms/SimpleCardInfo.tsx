@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 
 export default function SimpleCardInfo({title, releaseDate} : any) {
-    console.log(title)
+   
     return(
         <>
             <Typography
@@ -12,6 +12,7 @@ export default function SimpleCardInfo({title, releaseDate} : any) {
             </Typography>
             <Typography
                 variant="h5"
+                color="#be9c65"
             >
                 Release date: {releaseDate}
             </Typography>
