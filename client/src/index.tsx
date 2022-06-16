@@ -9,6 +9,8 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
+import { Provider } from 'react-redux';
+import { store } from './redux/store/index';
 
 const client = new ApolloClient({
   uri: 'https://swapi-graphql.netlify.app/.netlify/functions/index',
@@ -20,11 +22,13 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ApolloProvider>
+    <Provider store={store}>
+      <ApolloProvider client={client}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ApolloProvider>
+    </Provider>
   </React.StrictMode>
 );
 

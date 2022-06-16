@@ -1,6 +1,7 @@
 import { Box, Container } from "@mui/system";
 import Card from "../molecules/Card";
 import { useQuery, gql } from '@apollo/client';
+// import Queries from "../../queryActions/Queries";
 
 export default function CardDisplayer(){
     const ALL_FILMS = gql`
