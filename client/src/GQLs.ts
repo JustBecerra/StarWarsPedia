@@ -35,27 +35,26 @@ export const ALL_CHARACTERS = gql`
 
 export const ALL_PLANETS = gql`
   query Query {
-   allPlanets {
-    planets {
-      name
-    }
-    filmConnection {
-      films {
-        title
-      }
-    }
-    population
-    terrains
-    residentConnection {
-      residents {
-        species {
-          name
+    allPlanets {
+      planets {
+        name
+        filmConnection {
+          films {
+            title
+          }
+        }
+        population
+        terrains
+        residentConnection {
+          residents {
+            species {
+              name
+            }
+          }
         }
       }
     }
   }
-}
-}
 `;
 
 export const ALL_SPECIES = gql`
