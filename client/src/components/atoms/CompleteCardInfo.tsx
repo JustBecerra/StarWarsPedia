@@ -1,7 +1,7 @@
 import { Box } from "@mui/system"
 import { Typography } from "@mui/material"
 
-export default function CompleteCardInfo({film}:any){
+export default function CompleteCardInfo({categ}:any){
     return(
         <Box
             sx={{

@@ -4,6 +4,7 @@ export const ALL_FILMS = gql`
   query Query {
     allFilms {
       films {
+        id
         title
         episodeID
         releaseDate
@@ -18,6 +19,7 @@ export const ALL_CHARACTERS = gql`
   query Query {
     allPeople {
       people {
+        id
         birthYear
         homeworld {
           name
@@ -37,6 +39,7 @@ export const ALL_PLANETS = gql`
   query Query {
     allPlanets {
       planets {
+        id
         name
         filmConnection {
           films {
@@ -61,6 +64,7 @@ export const ALL_SPECIES = gql`
   query Query {
     allSpecies {
       species {
+        id
         averageHeight
         averageLifespan
         classification
@@ -84,6 +88,7 @@ export const ALL_VEHICULES = gql`
   query Query {
     allVehicles {
       vehicles {
+        id
         name
         vehicleClass
         model
