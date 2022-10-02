@@ -31,8 +31,9 @@ export default function CardDisplayer() {
         }}
       >
         {categoryInfo.map((categ: categoryTypes) => {
-          // console.log(categ)
-          return <Card key={categ.id} categ={categ} />;
+          return (
+            <Card key={categ.id} categ={categ} currentCategory={categoryID} />
+          );
         })}
       </Box>
     </Container>
