@@ -1,12 +1,10 @@
-import './App.css';
-import DesktopVersion from './components/pages/DesktopVersion';
+import "./App.css";
+import DesktopVersion from "./components/pages/DesktopVersion";
 
-function App() {
-  return (
-    <>
-      <DesktopVersion />
-    </>
-  );
-}
+const App = () => (
+  <>
+    <DesktopVersion />
+  </>
+);
 
 export default App;

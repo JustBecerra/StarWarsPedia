@@ -16,10 +16,7 @@ import SpeciesInfo from "../atoms/simpleInfo/SpeciesInfo";
 import VehiculesInfo from "../atoms/simpleInfo/VehiculesInfo";
 import PlanetsInfo from "../atoms/simpleInfo/PlanetsInfo";
 
-export default function Card(props: {
-  categ: categoryTypes;
-  currentCategory: string;
-}) {
+const Card = (props: { categ: categoryTypes; currentCategory: string }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -29,12 +26,11 @@ export default function Card(props: {
         sx={{
           width: 930,
           height: 200,
-          // backgroundColor: '#13191a',
-          borderColor: "blue.500",
+          cursor: "pointer",
           marginRight: "auto",
           marginLeft: "auto",
-          marginTop: 1,
           marginBottom: 1,
+          border: "2px solid #be9c65",
         }}
         onClick={handleOpen}
       >
@@ -64,4 +60,6 @@ export default function Card(props: {
       </Modal>
     </>
   );
-}
+};
+
+export default Card;
