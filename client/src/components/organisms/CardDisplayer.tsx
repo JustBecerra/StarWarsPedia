@@ -6,17 +6,17 @@ import { useQuery } from "@apollo/client";
 import { sortCategory, sortData } from "../../helpFunctions/helpFuncs";
 import { categoryTypes } from "../../redux/types/GQLtypes";
 
-export default function CardDisplayer() {
-  let categoryID = useSelector(
+const CardDisplayer = () => {
+  const categoryID = useSelector(
     (state: RootState) => state.CategoryID.currentCategory
   );
 
   const { loading, error, data } = useQuery(sortCategory(categoryID));
-  console.log(data);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   const categoryInfo = sortData(data);
-  console.log(categoryInfo);
+
   return (
     <Container>
       <Box
@@ -38,4 +38,6 @@ export default function CardDisplayer() {
       </Box>
     </Container>
   );
-}
+};
+
+export default CardDisplayer;

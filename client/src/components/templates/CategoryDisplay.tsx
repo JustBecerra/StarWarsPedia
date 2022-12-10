@@ -1,9 +1,9 @@
-import CardDisplayer from "../organisms/CardDisplayer"
+import CardDisplayer from "../organisms/CardDisplayer";
 
-export default function CategoryDisplay(){
-    return(
-        <>
-            <CardDisplayer />
-        </>
-    )
-}
+const CategoryDisplay = () => (
+  <>
+    <CardDisplayer />
+  </>
+);
+
+export default CategoryDisplay;
