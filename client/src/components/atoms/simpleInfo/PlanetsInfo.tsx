@@ -1,14 +1,14 @@
 import { Typography } from "@mui/material";
-import { filmTypes } from "../../redux/types/GQLtypes";
+import { planetTypes } from "../../../redux/types/GQLtypes";
 
-export default function MovieInfo(props: { categ: filmTypes }) {
+export default function PlanetsInfo(props: { categ: planetTypes }) {
   return (
     <>
       <Typography variant="h5" color="#be9c65">
-        {props.categ.title}
+        {props.categ.name}
       </Typography>
       <Typography variant="h5" color="#be9c65">
-        Release date: {props.categ.releaseDate}
+        Population: {props.categ.population}
       </Typography>
     </>
   );

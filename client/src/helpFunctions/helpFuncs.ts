@@ -24,15 +24,15 @@ export function sortCategory(categoryID: string) {
 }
 
 export function sortData(data: any) {
-  if (data.allFilms.films) {
+  if (data.allFilms?.films) {
     return data.allFilms.films;
-  } else if (data.allPeople.people) {
+  } else if (data.allPeople?.people) {
     return data.allPeople.people;
-  } else if (data.allPlanets.planets) {
+  } else if (data.allPlanets?.planets) {
     return data.allPlanets.planets;
-  } else if (data.allSpecies.species) {
+  } else if (data.allSpecies?.species) {
     return data.allSpecies.species;
-  } else if (data.allVehicles.vehicles) {
+  } else if (data.allVehicles?.vehicles) {
     return data.allVehicles.vehicles;
   }
 }
