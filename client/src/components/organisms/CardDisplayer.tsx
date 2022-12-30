@@ -30,9 +30,9 @@ const CardDisplayer = () => {
         marginLeft: "auto",
         marginTop: 11,
         marginBottom: 5,
-        paddingTop: 5,
+        paddingTop: 3,
         paddingBottom: 3,
-        overflow: "scroll",
+        overflowY: "scroll",
       }}
     >
       <List>
