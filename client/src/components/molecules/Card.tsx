@@ -24,8 +24,8 @@ const Card = (props: { categ: categoryTypes; currentCategory: string }) => {
     <>
       <Box
         sx={{
-          width: 930,
-          height: 200,
+          width: 11 / 12,
+          height: 100,
           cursor: "pointer",
           marginRight: "auto",
           marginLeft: "auto",
