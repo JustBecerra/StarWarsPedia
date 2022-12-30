@@ -7,7 +7,7 @@ const PlanetsInfo = (props: { categ: planetTypes }) => (
       {props.categ.name}
     </Typography>
     <Typography variant="h5" color="#be9c65">
-      Population: {props.categ.population}
+      Population: {props.categ.population ? props.categ.population : "Unknown"}
     </Typography>
   </Container>
 );
