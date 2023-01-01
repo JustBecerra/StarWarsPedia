@@ -1,8 +1,7 @@
 import { Box } from "@mui/system";
-import { Typography } from "@mui/material";
-import { filmTypes } from "../../../redux/types/GQLtypes";
+import { Button, Typography, Container } from "@mui/material";
 
-const CompleteMovieInfo = (props: { categ: filmTypes }) => (
+const CompleteMovieInfo = ({ categ, setOpen }) => (
   <Box
     sx={{
       width: 600,
@@ -13,19 +12,25 @@ const CompleteMovieInfo = (props: { categ: filmTypes }) => (
       left: "50%",
       transform: "translate(-50%, -50%)",
       border: "2px solid #be9c65",
+      padding: 5,
     }}
   >
+    <Container sx={{ display: "flex", justifyContent: "flex-end" }}>
+      <Button variant="outlined" color="error" onClick={setOpen(false)}>
+        X
+      </Button>
+    </Container>
     <Typography variant="h4" color="#be9c65">
-      Episode {props.categ.episodeID}: {props.categ.title}
+      Episode {categ.episodeID}: {categ.title}
     </Typography>
     <Typography variant="h6" color="#be9c65">
-      Directed by {props.categ.director}
+      Directed by {categ.director}
     </Typography>
     <Typography variant="h6" color="#be9c65">
-      Released in {props.categ.releaseDate}
+      Released in {categ.releaseDate}
     </Typography>
     <Typography variant="body1" color="#be9c65">
-      {props.categ.openingCrawl}
+      {categ.openingCrawl}
     </Typography>
   </Box>
 );

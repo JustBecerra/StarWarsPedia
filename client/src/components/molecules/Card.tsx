@@ -4,7 +4,6 @@ import { Modal } from "@mui/material";
 import React from "react";
 import CompleteCardInfo from "../atoms/completeInfo/CompleteFilmInfo";
 import {
-  categoryTypes,
   characterTypes,
   filmTypes,
   planetTypes,
@@ -16,7 +15,7 @@ import SpeciesInfo from "../atoms/simpleInfo/SpeciesInfo";
 import VehiculesInfo from "../atoms/simpleInfo/VehiculesInfo";
 import PlanetsInfo from "../atoms/simpleInfo/PlanetsInfo";
 
-const Card = (props: { categ: categoryTypes; currentCategory: string }) => {
+const Card = ({ categ, currentCategory }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -34,20 +33,20 @@ const Card = (props: { categ: categoryTypes; currentCategory: string }) => {
         }}
         onClick={handleOpen}
       >
-        {props.currentCategory === "ALL_FILMS" ? (
-          <FilmInfo categ={props.categ as filmTypes} />
+        {currentCategory === "ALL_FILMS" ? (
+          <FilmInfo categ={categ as filmTypes} />
         ) : null}
-        {props.currentCategory === "ALL_CHARACTERS" ? (
-          <CharactersInfo categ={props.categ as characterTypes} />
+        {currentCategory === "ALL_CHARACTERS" ? (
+          <CharactersInfo categ={categ as characterTypes} />
         ) : null}
-        {props.currentCategory === "ALL_SPECIES" ? (
-          <SpeciesInfo categ={props.categ as speciesTypes} />
+        {currentCategory === "ALL_SPECIES" ? (
+          <SpeciesInfo categ={categ as speciesTypes} />
         ) : null}
-        {props.currentCategory === "ALL_VEHICULES" ? (
-          <VehiculesInfo categ={props.categ as vehiculeTypes} />
+        {currentCategory === "ALL_VEHICULES" ? (
+          <VehiculesInfo categ={categ as vehiculeTypes} />
         ) : null}
-        {props.currentCategory === "ALL_PLANETS" ? (
-          <PlanetsInfo categ={props.categ as planetTypes} />
+        {currentCategory === "ALL_PLANETS" ? (
+          <PlanetsInfo categ={categ as planetTypes} />
         ) : null}
       </Box>
       <Modal
@@ -56,7 +55,7 @@ const Card = (props: { categ: categoryTypes; currentCategory: string }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <CompleteCardInfo categ={props.categ as filmTypes} />
+        <CompleteCardInfo categ={categ as filmTypes} setOpen={setOpen} />
       </Modal>
     </>
   );
